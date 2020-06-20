@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -15,6 +16,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private static Button btnMain;
     private static TextView tvMain;
+    private static CheckBox cbMain;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +25,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         btnMain = findViewById(R.id.btnMain);
         tvMain = findViewById(R.id.tvMain);
+        cbMain = findViewById(R.id.cbMain);
 
         btnMain.setOnClickListener(this);
     }
@@ -51,6 +54,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btnMain:
                 btnMain.setText("Updated");
                 tvMain.setText("Updated");
+                cbMain.setChecked(true);
                 break;
 
             default:
